@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main_page"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.adminto.buschedule.MainPage"
+    android:hapticFeedbackEnabled="false"
+    android:background="@color/cardview_light_background"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:paddingBottom="0dp"
+    tools:paddingLeft="0dp"
+    tools:paddingRight="0dp"
+    tools:paddingTop="0dp"
+    android:clipToPadding="true">
+
+    <TextView
+        android:text="Сообщение об ошибке"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editText2"
+        android:layout_alignLeft="@+id/editText2"
+        android:layout_alignStart="@+id/editText2"
+        android:id="@+id/textView2"
+        android:layout_alignRight="@+id/editText2"
+        android:layout_alignEnd="@+id/editText2"
+        android:textColor="@android:color/holo_red_dark"
+        android:visibility="invisible" />
+
+    <TextView
+        android:text="Приклад: 101-ФКБ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:layout_marginTop="34dp"
+        android:textColor="@android:color/darker_gray"
+        android:layout_below="@+id/textView2"
+        android:layout_alignLeft="@+id/editText2"
+        android:layout_alignStart="@+id/editText2" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner"
+        android:layout_alignBottom="@+id/textView4"
+        android:layout_alignRight="@+id/textView2"
+        android:layout_alignEnd="@+id/textView2"
+        android:layout_toEndOf="@+id/textView4"
+        android:focusable="false"
+        android:layout_below="@+id/textView"
+        android:layout_toRightOf="@+id/textView4" />
+
+    <TextView
+        android:text="Розклад для"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="14dp"
+        android:layout_above="@+id/textView2"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_marginBottom="121dp"
+        android:id="@+id/editText2"
+        android:background="@android:drawable/editbox_background_normal"
+        android:textColorLink="@color/cardview_shadow_start_color"
+        tools:layout_height="35dp"
+        android:textColor="@android:color/black"
+        android:autoText="false"
+        tools:autoText="false"
+        android:password="false"
+        tools:freezesText="false"
+        android:freezesText="false"
+        android:elegantTextHeight="false"
+        android:hint="Номер групи..."
+        android:layout_alignParentBottom="true"
+        tools:hint="Номер групи..."
+        android:textColorHint="@android:color/darker_gray"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView"
+        android:layout_alignRight="@+id/textView6"
+        android:layout_alignEnd="@+id/textView6" />
+
+    <TextView
+        android:text="  групи"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView5"
+        tools:textSize="18sp"
+        android:textColor="@android:color/holo_green_dark"
+        android:height="25dp"
+        android:width="20dp"
+        android:editable="false"
+        android:freezesText="true"
+        android:layout_below="@+id/textView"
+        android:layout_alignRight="@+id/spinner"
+        android:layout_alignEnd="@+id/spinner"
+        android:layout_toRightOf="@+id/textView4"
+        android:layout_toEndOf="@+id/textView4" />
+
+    <TextView
+        android:text=" BANKING \n      UNIVERSITY"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:clickable="false"
+        android:textSize="36sp"
+        android:fontFamily="serif"
+        android:textColor="@android:color/holo_green_dark"
+        android:textStyle="normal|bold"
+        android:layout_marginBottom="50dp"
+        android:editable="false"
+        android:layout_above="@+id/textView4"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button4"
+        android:background="@android:drawable/ic_media_play"
+        android:layout_alignBottom="@+id/editText2"
+        android:layout_below="@+id/textView2"
+        android:layout_alignRight="@+id/textView"
+        android:layout_alignEnd="@+id/textView"
+        android:layout_toRightOf="@+id/textView2"
+        android:layout_toEndOf="@+id/textView2" />
+
+    <Button
+        android:text="Вхід"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button3"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@android:drawable/divider_horizontal_bright" />
+
+</RelativeLayout>

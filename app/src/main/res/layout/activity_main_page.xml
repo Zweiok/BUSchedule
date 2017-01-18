@@ -1,63 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main_page"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
     tools:context="com.example.adminto.buschedule.MainPage"
     android:hapticFeedbackEnabled="false"
-    android:background="@color/common_google_signin_btn_text_dark_default">
+    android:background="@color/cardview_light_background"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:paddingBottom="0dp"
+    tools:paddingLeft="0dp"
+    tools:paddingRight="0dp"
+    tools:paddingTop="0dp"
+    android:clipToPadding="true"
+    style="@android:style/Theme.NoTitleBar"
+    android:theme="@style/AppTheme">
 
     <Button
-        android:text="ОК"
+        android:text="Вхід"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="45dp"
-        android:id="@+id/button2"
-        android:background="@android:drawable/presence_online"
-        android:layout_alignTop="@+id/editText2"
-        android:layout_alignRight="@+id/textView"
-        android:layout_alignEnd="@+id/textView" />
+        android:id="@+id/button3"
+        android:background="@android:drawable/divider_horizontal_bright"
+        android:elevation="0dp"
+        android:textStyle="normal|bold"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="setLoginPass"/>
 
-    <TextView
-        android:text="Сообщение об ошибке"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/editText2"
-        android:layout_alignLeft="@+id/editText2"
-        android:layout_alignStart="@+id/editText2"
-        android:id="@+id/textView2"
-        android:layout_alignRight="@+id/editText2"
-        android:layout_alignEnd="@+id/editText2"
-        android:textColor="@android:color/holo_red_dark" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toEndOf="@+id/editText2"
+        android:layout_alignBottom="@+id/editText2"
+        android:layout_toRightOf="@+id/editText2"
+        android:layout_alignTop="@+id/editText2">
 
-    <TextView
-        android:text="Пример: 101-ФКБ"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView3"
-        android:layout_marginTop="34dp"
-        android:textColor="@android:color/darker_gray"
-        android:layout_below="@+id/textView2"
-        android:layout_alignLeft="@+id/editText2"
-        android:layout_alignStart="@+id/editText2" />
-
-    <TextView
-        android:text="Рассписание для "
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView4"
-        android:textSize="18sp"
-        android:textColor="@android:color/black"
-        android:layout_marginBottom="15dp"
-        android:layout_above="@+id/textView2"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_alignStart="@+id/textView2" />
+        <Button
+            android:layout_width="46dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/button4"
+            android:background="@android:drawable/ic_media_play"
+            android:layout_alignBottom="@+id/editText2"
+            android:layout_below="@+id/textView2"
+            android:layout_alignRight="@+id/textView"
+            android:layout_alignEnd="@+id/textView"
+            android:layout_toRightOf="@+id/textView2"
+            android:layout_toEndOf="@+id/textView2"
+            android:onClick="openScheduleForm"/>
+    </FrameLayout>
 
     <TextView
         android:text=" BANKING \n      UNIVERSITY"
@@ -69,23 +67,92 @@
         android:fontFamily="serif"
         android:textColor="@android:color/holo_green_dark"
         android:textStyle="normal|bold"
-        android:layout_above="@+id/textView4"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="85dp" />
+        android:editable="false"
+        android:layout_marginBottom="87dp"
+        android:layout_above="@+id/textView5"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Розклад для"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="144dp"
+        android:layout_above="@+id/button3"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="Текст..."
         android:ems="10"
-        android:layout_marginBottom="118dp"
         android:id="@+id/editText2"
         android:background="@android:drawable/editbox_background_normal"
         android:textColorLink="@color/cardview_shadow_start_color"
         tools:layout_height="35dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:textColor="@android:color/black" />
+        android:textColor="@android:color/black"
+        android:autoText="false"
+        tools:autoText="false"
+        android:password="false"
+        tools:freezesText="false"
+        android:freezesText="false"
+        android:elegantTextHeight="false"
+        android:hint="Номер групи..."
+        tools:hint="Номер групи..."
+        android:textColorHint="@android:color/darker_gray"
+        android:layout_below="@+id/spinner"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView" />
+
+    <TextView
+        android:text="Приклад: 101-ФКБ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:textColor="@android:color/darker_gray"
+        android:layout_marginTop="23dp"
+        android:layout_below="@+id/editText2"
+        android:layout_alignLeft="@+id/editText2"
+        android:layout_alignStart="@+id/editText2" />
+
+    <TextView
+        android:text="Сообщение об ошибке"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:textColor="@android:color/holo_red_dark"
+        android:visibility="invisible"
+        android:layout_below="@+id/editText2"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_alignStart="@+id/textView3" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner"
+        android:focusable="false"
+        android:layout_alignTop="@+id/textView4"
+        android:layout_toRightOf="@+id/textView4"
+        android:layout_toEndOf="@+id/textView4" />
+
+    <TextView
+        android:text="  групи"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView5"
+        tools:textSize="18sp"
+        android:textColor="@android:color/holo_green_dark"
+        android:height="25dp"
+        android:width="20dp"
+        android:editable="false"
+        android:freezesText="true"
+        android:layout_alignBaseline="@+id/textView4"
+        android:layout_alignBottom="@+id/textView4"
+        android:layout_toRightOf="@+id/textView4"
+        android:layout_alignRight="@+id/spinner"
+        android:layout_alignEnd="@+id/spinner" />
 
 </RelativeLayout>
