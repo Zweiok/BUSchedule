@@ -17,7 +17,6 @@
     tools:paddingRight="0dp"
     tools:paddingTop="0dp"
     android:clipToPadding="true"
-    style="@android:style/Theme.NoTitleBar"
     android:theme="@style/AppTheme">
 
     <Button

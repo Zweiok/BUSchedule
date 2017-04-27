@@ -27,6 +27,7 @@ public class MainPage extends AppCompatActivity {
     }
 
     String[] data = {"групи", "кабінету", "викладача"};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,6 +73,7 @@ public class MainPage extends AppCompatActivity {
             }
             @Override
             public void onNothingSelected(AdapterView<?> arg0) {
+
             }
         });
     }

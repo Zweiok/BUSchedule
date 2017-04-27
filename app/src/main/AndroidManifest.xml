@@ -16,8 +16,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".schedule_activity" />
-        <activity android:name="layout1.layout.MainActivity" />
-        <activity android:name="layout.layout1.CalendarView" />
     </application>
 
 </manifest>
